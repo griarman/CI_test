@@ -1,0 +1,173 @@
+
+/*Main */
+#middle>label{
+	position: relative;
+    bottom: 30%;
+    margin-right: 35px
+}
+#upper,#downer{
+	margin-left: 10px;
+	margin-bottom: 3px;
+	margin-top: 15px;
+}
+#upper>label{
+	margin-right: 15px;
+}
+#downer>label{
+	margin-right: 20px;
+}
+/*#right>* {
+	position: relative;
+    top: 35%;
+}*/
+input[type=text],input[type=number],textarea,input{
+	border: .5px solid #ccc;
+	height: 25px;
+	min-width: 65%;
+	border-radius: 10px;
+	text-align: center;
+	outline: none;
+}
+input[type=text]:focus,input[type=number]:focus,textarea:focus{
+	border: 2px solid #F07575;
+}
+::selection{
+	background-color: #F07575;
+	color: #fff;
+}
+#add_images{
+	margin: 5px 0;
+}
+textarea{
+	max-width: 65%;
+	margin-top: 15px;
+	min-height: 85px;
+	max-height: 85px;
+}
+textarea::placeholder{
+	line-height: 85px;
+}
+input[type=file]{
+	display: none;
+}
+button{
+	border: 0;
+	background-color: #fff;
+	outline: none;
+	cursor: pointer;
+}
+button:active{
+	opacity: .7;
+}
+button:focus{
+	outline: none;
+
+}
+#add{
+	padding: 4px 15px;
+	border-radius: 10px;
+	border: 0;
+	cursor: pointer;
+	background: #ccc;
+	width: 100%;
+	color: #fff;
+}
+#add_images{
+	cursor: pointer;
+}
+#add:active{
+	opacity: .7;
+}
+#error{
+	text-align: center;
+	color: red;
+	font-size: 1.6em;
+}
+table{
+	border-collapse: collapse;
+	margin: 10px 0;
+
+}
+table,tr,td{
+	border: .5px solid #ccc;
+	box-sizing: border-box;
+}
+td{
+
+	text-align: center;
+	padding: 3px 10px;
+}
+td:focus{
+	outline: .5px solid #F07575;
+	border:0;
+
+}
+span{
+	cursor: no-drop;
+}
+img{
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	transition: all .3s linear;
+}
+img:hover{
+	transform: scale(3,3);
+	z-index: 8888;
+}
+form[name=img]{
+	display: inline-block;
+}
+.prod_des{
+	max-width: 200px;
+	max-height: 200px;
+	overflow-y: auto; 
+}
+.img-thumbnail {
+    height: 75px;
+    width: 75px;
+    border: 1px solid #000;
+    margin: 0 5px 0 0;
+}
+section{
+	margin-top: -45px;
+    position: absolute;
+    top: 70%;
+    left: -49px;
+    z-index: 99999;
+}
+
+#href{
+	display: block;
+	width: 60%;
+	text-align: center!important;
+	border: 1px solid #ccc;
+	margin: 0 auto;
+	float: none;
+}
+main{
+	margin: 0 auto;
+	margin-top: 10px;
+	width: 60%;
+	text-align: center!important;
+	border: 1px solid #ccc;
+	border-bottom: 0;
+	font-weight: bold;
+	padding: 3px 0;
+}
+article{
+	margin: 0 auto;
+	width: 60%;
+	text-align: center!important;
+	cursor: pointer;
+	border: 1px solid #ccc;
+	border-bottom: 0;
+}
+.leftArrow{
+	margin-left: -7px;
+	margin-right: 10px;
+}
+.rightArrow{
+	margin-left: 10px;
+	margin-right: -7px;
+}

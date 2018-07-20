@@ -1,0 +1,11 @@
+th{
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 5px;
+}
+.delete_user,.update_user{
+    cursor: pointer;
+}
+table{
+    margin: 0 auto;
+}

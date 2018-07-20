@@ -1,0 +1,25 @@
+#leftAside{
+    background: #f8f9fa;
+    float:left;
+    width: 20%;
+    border: 1px solid #ccc;
+    text-align: center;
+    height: 100vh;
+    box-sizing: border-box;
+    position: fixed;
+    top: 56px;
+}
+#leftAside>section{
+    min-height: 30px;
+    border-bottom: 1px solid #ccc;
+    line-height: 30px;
+    cursor: pointer;
+}
+#leftAside>section:hover{
+    background: #4AA0A0;
+    color: #fff;
+}
+.sectionChecked,#leftAside>section:active{
+    color: #fff;
+    background: #8EE4E4;
+}
