@@ -14,13 +14,12 @@ class Home_model extends CI_Model
     }
     public function get_categories()
     {
-        $query = $this->db->get('categories');
-        return $query->result_array();
+        return $this->db->get('categories')->result_array();
     }
     public function check_category($name)
     {
-        $query = $this->db->get_where('categories',['name' => $name]);
-        return $query->num_rows();
+        return $this->db->get_where('categories',['name' => $name])->num_rows();
+
     }
     public function add_category($name)
     {

@@ -16,6 +16,10 @@ class Home extends CI_Controller
     public function add()
     {
         $name = trim($this->input->post('name', true));
+        if(empty($name)){
+            echo false;
+            die;
+        }
         if($this->home_model->check_category($name)){
             echo false;
             die;

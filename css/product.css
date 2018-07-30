@@ -16,10 +16,7 @@
 #downer>label{
 	margin-right: 20px;
 }
-/*#right>* {
-	position: relative;
-    top: 35%;
-}*/
+
 input[type=text],input[type=number],textarea,input{
 	border: .5px solid #ccc;
 	height: 25px;
@@ -63,7 +60,7 @@ button:focus{
 	outline: none;
 
 }
-#add{
+#add_prod{
 	padding: 4px 15px;
 	border-radius: 10px;
 	border: 0;
@@ -75,7 +72,7 @@ button:focus{
 #add_images{
 	cursor: pointer;
 }
-#add:active{
+#add_prod:active{
 	opacity: .7;
 }
 #error{
@@ -100,7 +97,6 @@ td{
 td:focus{
 	outline: .5px solid #F07575;
 	border:0;
-
 }
 span{
 	cursor: no-drop;
@@ -121,7 +117,6 @@ form[name=img]{
 .prod_des{
 	max-width: 200px;
 	max-height: 200px;
-	overflow-y: auto; 
 }
 .img-thumbnail {
     height: 75px;
@@ -136,7 +131,6 @@ section{
     left: -49px;
     z-index: 99999;
 }
-
 #href{
 	display: block;
 	width: 60%;

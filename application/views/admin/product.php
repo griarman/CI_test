@@ -1,4 +1,4 @@
-<form action="add_product.php" method="post" enctype="multipart/form-data" class="container-fluid">
+<form action="/store/index.php/product/do_upload" method="post" enctype="multipart/form-data" class="container-fluid">
     <div class="row">
         <div id="left" class="col-md-3">
             <div id="upper">
@@ -16,11 +16,12 @@
         </div>
         <div id="right" class="col-md-3">
             <label for="images" id="add_images">Add images</label>
+            <input type="hidden" value="<?=  array_reverse(explode('/',$_SERVER['REQUEST_URI']))[0] ?>" name="cat_id">
             <input type="file" name="images[]" id="images" multiple="">
             <section><span id="outputMulti"></span></section>
         </div>
     </div>
-    <button id="add">Add new Product</button>
+    <button id="add_prod">Add new Product</button>
 </form>
 
 <div class="container-fluid row">
@@ -87,6 +88,7 @@
             echo "<div id=error class='center'>{$_SESSION['error']}</div>";
             unset($_SESSION['error']);
         }
+        echo $this->pagination->create_links();
 ?>
 
 

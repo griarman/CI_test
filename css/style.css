@@ -1,3 +1,6 @@
+*{
+	outline: none!important;
+}
 table{
 	margin: 20px auto;
 }
@@ -8,6 +11,7 @@ tr,table,td{
 }
 td{
 	padding: 10px;
+	vertical-align: middle!important;
 }
 button{
 	background: #fff;
@@ -31,4 +35,8 @@ a:active{
 
 [hidden] {
 	display: none;
+}
+.checked{
+	background-color: #F39814;
+	color: #fff;
 }

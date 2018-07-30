@@ -6,7 +6,6 @@
  * Time: 16:22
  */
 
-
 class Admin extends CI_Controller
 {
     public function __construct()
@@ -15,7 +14,7 @@ class Admin extends CI_Controller
         $this->load->model('home_model');
         $this->load->model('product_model');
         $this->load->model('order_model');
-        $this->load->library('session');
+//        $this->load->library('session');
     }
 
     public function index()
@@ -50,9 +49,7 @@ class Admin extends CI_Controller
         foreach($products as $key => $value){
             $data['images'][$value['id']] = $this->product_model->get_images($value['id']);
         }
-        if($id === null){
-            $data['cat'] = true;
-        }
+
         $data['title'] = 'Products';
         $this->load->view('admin/header',$data);
         $this->load->view('admin/product');
@@ -65,6 +62,7 @@ class Admin extends CI_Controller
             redirect('/admin');
             die;
         }
+
         $data['title'] = 'Users';
         $this->load->view('admin/header',$data);
         $this->load->view('admin/user');

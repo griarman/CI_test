@@ -1,4 +1,14 @@
 $(document).ready(function(){
+    (function(){
+        let href = location.href;
+        let last_one = href.split('/').reverse()[0];
+        if(last_one !== 'product'){
+            let prod_cat = $('.prod_cat');
+            for(let i = 0; i < prod_cat.length;i++){
+                prod_cat.eq(i).attr('id') === last_one ? prod_cat.eq(i).attr('class','checked') : null;
+            }
+        }
+    })();
 	$('#add').click(function(){
 		let category = $('#cad').val();
 		$.ajax({
@@ -157,34 +167,27 @@ $(document).ready(function(){
 
 	$('.prod_cat').click(function () {
        let id = $(this).attr('id');
+        $('.prod_cat').removeClass('checked');
+        $(this).attr('class','checked');
        let href = location.href;
-       let last_one = href.substr(href.length-1);
-       if(last_one === 't'){
+       let last_one = href.split('/').reverse()[0];
+       if(last_one === 'product'){
            href = href + '/' + id;
        }
        else{
-           href = href.substr(0,href.length-1) + id;
+           let new_href = href.split('/');
+           new_href.pop();
+           new_href.push(id);
+           href = new_href.join('/');
        }
         location.href = href;
     });
-
-    /*let article = $('article');
-    article.click(function(){
-		let id = $(this).attr('id');
-		let href = location.search.split('=');
-		href = href[0] + '=' + id;
-		location.search = href;
-	});
-	for(let i = 0; i < article.length;i++){
-		let href = location.search.split('=');
-		href = href[1];
-		if(href === article.eq(i).attr('id')){
-            article.eq(i).css({
-				'background-color':'#F39814',
-				color: '#fff'
-            });
-		}
-	}*/
+    $('#add_prod').click(function (event) {
+       if($('.checked').length === 0 || typeof +location.href.substr(location.href.length-1) !== 'number'){
+           alert('You must select category');
+           event.preventDefault();
+       }
+    });
     $('#images').on('change',function (evt) {
 		let files = evt.target.files;
 		$('#outputMulti').html('');
